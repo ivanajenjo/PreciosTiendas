@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 
 def buscarInstant(juego):
     navegador = webdriver.Chrome("driver/chromedriver.exe")
-    navegador.maximize_window()
+    navegador.minimize_window()
     navegador.get("https://www.instant-gaming.com/es/")
     elem = navegador.find_element_by_name("q")
     elem.clear()
