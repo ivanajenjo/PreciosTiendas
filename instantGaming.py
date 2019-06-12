@@ -10,24 +10,23 @@ print("Hola")
 
 # Set the URL you want to webscrape from
 url = "https://www.instant-gaming.com/es/"
-req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+req1 = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
 
 juego = input("Que juego quiere buscar?")
 print("Quiere buscar " + juego)
 
-html = urlopen(req)
+html = urlopen(req1)
 res = BeautifulSoup(html.read(),"html.parser")
 
 print(res.title)
 
 urlbusqueda = "https://www.instant-gaming.com/es/busquedas/?query=" + juego
-req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+req2 = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
 
-html = urlopen(req)
+html = urlopen(req2)
 res = BeautifulSoup(html.read(),"html.parser")
-print(res.find_all('#ig-panel-center > div.search-wrapper > div.search > div:nth-child(1)'))
+print(res.find('div', class_ = 'categoryBest item mainshadow'))
 
-print(res.title)
 
 
 
