@@ -11,5 +11,5 @@ def buscarInstant(juego):
     elem.send_keys(juego)
     elem.send_keys(Keys.RETURN)
     elem = navegador.find_element_by_class_name("price")
-    print("Precio en Instant Gaming", elem.text)
+    print("Precio en Instant Gaming de ", juego, " es ", elem.text)
     navegador.close()
