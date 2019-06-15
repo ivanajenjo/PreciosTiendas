@@ -6,7 +6,12 @@ def buscarG2A(juego):
     navegador = webdriver.Chrome("driver/chromedriver.exe")
     #navegador.minimize_window()
     navegador.get("https://www.g2a.com/")
-    elem = navegador.find_element_by_class_name("btn btn-primary")
+    try:
+        elem = navegadir.find_element_by_class_name("close")
+        elem.click()
+    except:
+        print("La jodiste")
+    elem = navegador.find_element_by_class_name("button button--size-large button--type-transparent")
     elem.click()
     elem = navegador.find_element_by_name("query")
     elem.clear()
@@ -16,4 +21,4 @@ def buscarG2A(juego):
     print("Precio en G2A de ", juego, " es ", elem.text)
     navegador.close()
 
-#buscarG2A("GTAV")
+buscarG2A("GTAV")
