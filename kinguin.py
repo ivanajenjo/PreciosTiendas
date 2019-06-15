@@ -1,0 +1,17 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+nombreTienda = "Kinguin"
+
+def buscarKinguin(juego):
+    navegador = webdriver.Chrome("driver/chromedriver.exe")
+    ##navegador.minimize_window()
+    navegador.get("https://www.kinguin.net/es/")
+    elem = navegador.find_element_by_name("q")
+    elem.clear()
+    elem.send_keys(juego)
+    elem.send_keys(Keys.RETURN)
+    elem = navegador.find_element_by_class_name("actual-price")
+    print("Precio en", nombreTienda,"de", juego, "es", elem.text)
+    navegador.close()
+
+#buscarKinguin("GTAV")
