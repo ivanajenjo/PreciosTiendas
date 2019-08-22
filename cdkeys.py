@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 nombreTienda = "CDKeys"
 
-def buscarKinguin(juego):
+def buscarCDKeys(juego):
     navegador = webdriver.Chrome("driver/chromedriver.exe")
     ##navegador.minimize_window()
     navegador.get("https://www.cdkeys.com/es_es/")
