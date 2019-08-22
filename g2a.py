@@ -18,7 +18,9 @@ def buscarG2A(juego):
     elem.send_keys(juego)
     elem.send_keys(Keys.RETURN)
     elem = navegador.find_element_by_class_name("Card__price-cost price")
+    precio = elem.text
     print("Precio en G2A de ", juego, " es ", elem.text)
     navegador.close()
+    return precio
 
 buscarG2A("GTAV")

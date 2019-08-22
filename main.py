@@ -1,10 +1,12 @@
 import instantGaming
 import g2a
 import kinguin
-import threading
+import cdkeys
+import hrk
+
 
 print("Que juego quiere buscar ?")
 juego = input()
-instantGaming.buscarInstant(juego)
+precioInstant = instantGaming.buscarInstant(juego)
 #g2a.buscarG2A(juego)
-kinguin.buscarKinguin(juego)
+precioKinguin = kinguin.buscarKinguin(juego)

@@ -11,7 +11,9 @@ def buscarKinguin(juego):
     elem.send_keys(juego)
     elem.send_keys(Keys.RETURN)
     elem = navegador.find_element_by_class_name("actual-price")
+    precio = elem.text
     print("Precio en", nombreTienda,"de", juego, "es", elem.text)
     navegador.close()
+    return precio
 
 #buscarKinguin("GTAV")
