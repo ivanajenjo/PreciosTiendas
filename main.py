@@ -14,3 +14,4 @@ precioHrk = hrk.buscarHrk(juego)
 precioCdkeys = cdkeys.buscarCDKeys(juego)
 
 preciosTotal = [precioInstant,precioCdkeys,precioG2a,precioHrk,precioKinguin]
+print(preciosTotal)
