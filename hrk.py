@@ -14,7 +14,7 @@ def buscarHrk(juego):
     elem.send_keys(Keys.RETURN)
     precio = navegador.find_element_by_class_name("price")
     precio = precio.text
-    print("Precio en", nombreTienda,"de", juego, "es", precio)
+    print("Precio en ", nombreTienda," de ", juego, " es ", precio)
     #navegador.close()
     return precio
 
