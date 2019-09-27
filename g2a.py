@@ -7,7 +7,7 @@ def buscarG2A(juego):
     #navegador.minimize_window()
     navegador.get("https://www.g2a.com/")
     try:
-        elem = navegadir.find_element_by_class_name("close")
+        elem = navegador.find_element_by_class_name("close")
         elem.click()
     except:
         print("La jodiste")
